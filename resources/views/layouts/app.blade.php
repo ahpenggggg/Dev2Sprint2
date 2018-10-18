@@ -22,6 +22,9 @@
         body{
           background-color: #26282b;
         }
+        navbar-nav{
+          padding: 50px;
+        }
     </style>
 
 </head>
@@ -39,7 +42,59 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                      <li class="nav-item dropdown">
+                          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                              {{ 'Sales' }} <span class="caret"></span>
+                          </a>
 
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                              {{ ('Add/Remove Sales Record') }}
+                          </a>
+
+                          <a class="dropdown-item" href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                              {{ ('Edit Sales Record') }}
+                          </a>
+
+                          <a class="dropdown-item" href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                              {{ ('Display Sales Record') }}
+                          </a>
+
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              @csrf
+                          </form>
+                      </div>
+                    </li>
+
+                      <li class="nav-item dropdown">
+                          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                              {{ 'Inventory' }} <span class="caret"></span>
+                          </a>
+
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="{{ route('logout') }}"
+                                 onclick="event.preventDefault();
+                                               document.getElementById('logout-form').submit();">
+                                  {{ __('Add Inventory Record') }}
+                              </a>
+
+                              <a class="dropdown-item" href="{{ route('logout') }}"
+                                 onclick="event.preventDefault();
+                                               document.getElementById('logout-form').submit();">
+                                  {{ ('Display Inventory Record') }}
+                              </a>
+
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                  @csrf
+                              </form>
+                          </div>
+                      </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
