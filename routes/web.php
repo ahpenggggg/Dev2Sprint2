@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/addItem', function (){
+  return view('pages.addItem');
+});
+
 Auth::routes();
 
+Route::get('/pages/addItem', 'pagesController@item')->name('addItem');
 Route::get('/home', 'HomeController@index')->name('home');
