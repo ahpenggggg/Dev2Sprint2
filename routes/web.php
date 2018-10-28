@@ -23,7 +23,7 @@ Route::get('/editRecord', function(){
   return view('pages.editRecord');
 });
 
-Route::get('/displaySales'), function(){
+Route::get('/displaySales', function(){
   return view('pages.displaySales');
 }
 
