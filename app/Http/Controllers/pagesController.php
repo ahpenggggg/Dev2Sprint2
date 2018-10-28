@@ -18,4 +18,12 @@ class pagesController extends Controller
   public function dSales(){
       return view('pages.displaySales');
   }
+
+  public function addInventory(){
+      return view('pages.addInventory');
+  }
+
+  public function displayInventory(){
+      return view('pages.displayInventory');
+  }
 }

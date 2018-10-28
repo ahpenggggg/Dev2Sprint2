@@ -20,12 +20,12 @@
             </div> -->
 
             <div class="blocks">
-              <ul>
+              <ul id="homeblocks">
                 <li id="salesRecord" ><a href="{{route('addItem')}}">Add/Remove Sales Record</a></li>
                 <li id="editRecord"><a href="{{route('editRecord')}}">Edit Sales Record</a></li>
-                <li id="displaySales"><a href="{{route('displaySales')}}"></a>Display Sales Record</li>
-                <li id="inventoryRecord">Add/Remove Inventory</li>
-                <li id="displayInventory">Display Inventory</li>
+                <li id="displaySales"><a href="{{route('displaySales')}}">Display Sales Record</a></li>
+                <li id="inventoryRecord"><a href="{{route('addInventory')}}">Add/Remove Inventory</a></li>
+                <li id="displayInventory"><a href="{{route('displayInventory')}}">Display Inventory</a></li>
               </ul>
             </div>
 

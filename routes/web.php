@@ -25,10 +25,22 @@ Route::get('/editRecord', function(){
 
 Route::get('/displaySales', function(){
   return view('pages.displaySales');
-}
+});
+
+Route::get('/addInventory', function(){
+  return view('pages.addInventory');
+});
+
+Route::get('/displayInventory', function(){
+  return view('pages.displayInventory');
+});
+
 
 Auth::routes();
 
 Route::get('/pages/addItem', 'pagesController@item')->name('addItem');
 Route::get('/pages/editRecord', 'pagesController@edit')->name('editRecord');
+Route::get('/pages/displaySales', 'pagesController@dSales')->name('displaySales');
+Route::get('/pages/addInventory', 'pagesController@addInventory')->name('addInventory');
+Route::get('/pages/displayInventory', 'pagesController@displayInventory')->name('displayInventory');
 Route::get('/home', 'HomeController@index')->name('home');

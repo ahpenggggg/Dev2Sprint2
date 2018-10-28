@@ -20973,6 +20973,10 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px white;
 }
 
+ul#homeblocks {
+  list-style-type: none;
+}
+
 #salesRecord {
   background: var(--orange) !important;
 }
@@ -20992,4 +20996,3 @@ a.text-dark:focus {
 #displayInventory {
   background: var(--yellow);
 }
-
