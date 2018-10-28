@@ -47492,6 +47492,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -47501,7 +47503,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
-    addSales: function addSales() {
+    addSales: function addSales(index) {
       this.items.push({ id: '' });
     },
     deleteSales: function deleteSales(index) {
@@ -47530,25 +47532,21 @@ var render = function() {
             "div",
             { staticClass: "card-body" },
             [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-success col-md-4 mt-22",
+                  on: { click: _vm.addSales }
+                },
+                [_vm._v("\n                      Create "), _c("br")]
+              ),
+              _vm._v(" "),
               _vm._l(_vm.items, function(item, index) {
                 return _c("div", { staticClass: "form-inline" }, [
                   _c("input", {
                     staticClass: "form-control mt-2",
                     attrs: { placeholder: "Item ID" }
                   }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success ml-1 mt-2",
-                      on: { click: _vm.addSales }
-                    },
-                    [
-                      _vm._v(
-                        "\n                        +\n                      "
-                      )
-                    ]
-                  ),
                   _vm._v(" "),
                   _c(
                     "button",

@@ -7,11 +7,13 @@
 
 <!-- Add item field -->
                   <div class="card-body">
+                    <button class="btn btn-success col-md-4 mt-22" @click="addSales">
+                      Create <br>
+                    </button>
                     <div class="form-inline" v-for="(item, index) of items">
+
                       <input class="form-control mt-2" placeholder="Item ID">
-                      <button class="btn btn-success ml-1 mt-2" @click="addSales">
-                        +
-                      </button>
+
                       <button class="btn btn-success ml-1 mr-1 mt-2" @click="deleteSales(index)">
                         -
                       </button>
