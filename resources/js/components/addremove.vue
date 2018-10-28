@@ -8,7 +8,7 @@
 <!-- Add item field -->
                   <div class="card-body">
                     <button class="btn btn-success col-md-4 mt-22" @click="addSales">
-                      Create <br>
+                      Create Item <br />
                     </button>
                     <div class="form-inline" v-for="(item, index) of items">
 
@@ -42,7 +42,15 @@
         this.items.push({id : ''});
       },
       deleteSales(index) {
-        this.items.splice(index, 1);
+        if (index = 1) {
+          while (index >= 1) {
+            this.items.splice(index, 1);
+            break;
+          }
+        } else {
+          null;
+        }
+
       }
     }
   }
