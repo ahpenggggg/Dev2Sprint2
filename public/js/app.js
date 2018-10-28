@@ -47503,11 +47503,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
-    addSales: function addSales(index) {
+    addSales: function addSales() {
       this.items.push({ id: '' });
     },
     deleteSales: function deleteSales(index) {
-      this.items.splice(index, 1);
+      if (index = 1) {
+        while (index >= 1) {
+          this.items.splice(index, 1);
+          break;
+        }
+      } else {
+        null;
+      }
     }
   }
 });
@@ -47538,7 +47545,7 @@ var render = function() {
                   staticClass: "btn btn-success col-md-4 mt-22",
                   on: { click: _vm.addSales }
                 },
-                [_vm._v("\n                      Create "), _c("br")]
+                [_vm._v("\n                      Create Item "), _c("br")]
               ),
               _vm._v(" "),
               _vm._l(_vm.items, function(item, index) {

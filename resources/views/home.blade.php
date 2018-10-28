@@ -22,8 +22,8 @@
             <div class="blocks">
               <ul>
                 <li id="salesRecord" ><a href="{{route('addItem')}}">Add/Remove Sales Record</a></li>
-                <li id="editRecord">Edit Sales Record</li>
-                <li id="displaySales">Display Sales Record</li>
+                <li id="editRecord"><a href="{{route('editRecord')}}">Edit Sales Record</a></li>
+                <li id="displaySales"><a href="{{route('displaySales')}}"></a>Display Sales Record</li>
                 <li id="inventoryRecord">Add/Remove Inventory</li>
                 <li id="displayInventory">Display Inventory</li>
               </ul>
