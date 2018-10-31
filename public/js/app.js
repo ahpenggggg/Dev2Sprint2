@@ -47494,11 +47494,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      items: [{ id: '' }]
+      items: [{ id: '' }],
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
     };
   },
 
@@ -47535,49 +47539,63 @@ var render = function() {
             _vm._v("Add/Remove Sales Record")
           ]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "card-body" },
-            [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-success col-md-4 mt-22",
-                  on: { click: _vm.addSales }
-                },
-                [_vm._v("\n                      Create Item "), _c("br")]
-              ),
-              _vm._v(" "),
-              _vm._l(_vm.items, function(item, index) {
-                return _c("div", { staticClass: "form-inline" }, [
-                  _c("input", {
-                    staticClass: "form-control mt-2",
-                    attrs: { placeholder: "Item ID" }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success ml-1 mr-1 mt-2",
-                      on: {
-                        click: function($event) {
-                          _vm.deleteSales(index)
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "form",
+              {
+                attrs: { action: "/sales", method: "post" },
+                on: {
+                  submit: function($event) {
+                    _vm.submitSales()
+                  }
+                }
+              },
+              [
+                _c("input", {
+                  attrs: { type: "hidden", name: "_token" },
+                  domProps: { value: _vm.csrf }
+                }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-success col-md-2",
+                    on: { click: _vm.addSales }
+                  },
+                  [_vm._v("\n                        Create Item "), _c("br")]
+                ),
+                _vm._v(" "),
+                _vm._l(_vm.items, function(item, index) {
+                  return _c("div", { staticClass: "form-inline" }, [
+                    _c("input", {
+                      staticClass: "form-control mt-2 col-xs-3",
+                      attrs: { placeholder: "Item ID", name: "salesID" }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success ml-1 mr-1 mt-2",
+                        on: {
+                          click: function($event) {
+                            _vm.deleteSales(index)
+                          }
                         }
-                      }
-                    },
-                    [
-                      _vm._v(
-                        "\n                        -\n                      "
-                      )
-                    ]
-                  )
-                ])
-              }),
-              _vm._v(" "),
-              _vm._m(0)
-            ],
-            2
-          )
+                      },
+                      [
+                        _vm._v(
+                          "\n                        -\n                      "
+                        )
+                      ]
+                    )
+                  ])
+                }),
+                _vm._v(" "),
+                _vm._m(0)
+              ],
+              2
+            )
+          ])
         ])
       ])
     ])
@@ -47589,9 +47607,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "submit" }, [
-      _c("button", { staticClass: "btn btn-submit col-md-4 mt-2" }, [
-        _vm._v(" Submit ")
-      ])
+      _c("input", {
+        attrs: { type: "submit", name: "submit", value: "Submit2" }
+      })
     ])
   }
 ]

@@ -7,12 +7,14 @@
 
 <!-- Add item field -->
                   <div class="card-body">
-                    <button class="btn btn-success col-md-4 mt-22" @click="addSales">
-                      Create Item <br />
-                    </button>
+                    <form action="/sales" method="post" @submit="submitSales()">
+                    <input type="hidden" name="_token" :value="csrf">
+                      <button class="btn btn-success col-md-2" @click="addSales">
+                        Create Item <br />
+                      </button>
                     <div class="form-inline" v-for="(item, index) of items">
 
-                      <input class="form-control mt-2" placeholder="Item ID">
+                      <input class="form-control mt-2 col-xs-3" placeholder="Item ID" name="salesID">
 
                       <button class="btn btn-success ml-1 mr-1 mt-2" @click="deleteSales(index)">
                         -
@@ -20,9 +22,10 @@
                     </div>
 
                     <div class="submit">
-                      <button class="btn btn-submit col-md-4 mt-2"> Submit </button>
-                    </div>
 
+                      <input type="submit" name="submit" value="Submit">
+                    </div>
+                  </form>
                   </div>
                 </div>
             </div>
@@ -34,7 +37,8 @@
   export default {
     data () {
         return {
-        items: [{id:''}]
+        items: [{id:''}],
+        csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
       }
     },
     methods: {

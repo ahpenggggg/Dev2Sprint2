@@ -35,6 +35,8 @@ Route::get('/displayInventory', function(){
   return view('pages.displayInventory');
 });
 
+Route::post('/sales', 'PostController@insertSales');
+
 
 Auth::routes();
 
