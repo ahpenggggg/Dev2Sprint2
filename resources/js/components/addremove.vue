@@ -7,7 +7,7 @@
 
 <!-- Add item field -->
                   <div class="card-body">
-                    <button class="       col-md-2" @click="addSale">
+                    <button class="btn btn-success col-md-2" @click="addSale">
                       Create Item <br />
                     </button>
                     <form action="/Sales" method="post">
@@ -17,13 +17,13 @@
 
                       <input class="form-control mt-2 col-5" placeholder="Item ID" name="itemID" maxlength="12"  v-model="item.itemID">
 
-                      <button class="       ml-1 mr-1 mt-2" @click.prevent="deleteSales(index)">
+                      <button class="btn btn-success ml-1 mr-1 mt-2" @click.prevent="deleteSales(index)">
                         -
                       </button>
                     </div>
 
                     <div class="submit">
-                      <input class="       mt-2" type="submit" name="submit" value="Submit">
+                      <input class="btn btn-success mt-2" type="submit" name="submit" value="Submit">
                     </div>
                   </form>
                   </div>

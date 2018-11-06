@@ -47544,7 +47544,10 @@ var render = function() {
           _c("div", { staticClass: "card-body" }, [
             _c(
               "button",
-              { staticClass: "       col-md-2", on: { click: _vm.addSale } },
+              {
+                staticClass: "btn btn-success col-md-2",
+                on: { click: _vm.addSale }
+              },
               [_vm._v("\n                      Create Item "), _c("br")]
             ),
             _vm._v(" "),
@@ -47588,7 +47591,7 @@ var render = function() {
                     _c(
                       "button",
                       {
-                        staticClass: "       ml-1 mr-1 mt-2",
+                        staticClass: "btn btn-success ml-1 mr-1 mt-2",
                         on: {
                           click: function($event) {
                             $event.preventDefault()
@@ -47622,7 +47625,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "submit" }, [
       _c("input", {
-        staticClass: "       mt-2",
+        staticClass: "btn btn-success mt-2",
         attrs: { type: "submit", name: "submit", value: "Submit" }
       })
     ])
@@ -47817,7 +47820,7 @@ var render = function() {
                         _c(
                           "button",
                           {
-                            staticClass: "   -succes float-right mb-3",
+                            staticClass: "btn btn-succes float-right mb-3",
                             attrs: { type: "button", name: "removeItem" },
                             on: { click: _vm.deleteInventory }
                           },
@@ -47967,7 +47970,7 @@ var render = function() {
                     _c(
                       "button",
                       {
-                        staticClass: "     m-2",
+                        staticClass: "btn btn-success m-2",
                         on: {
                           click: function($event) {
                             $event.preventDefault()
@@ -47979,7 +47982,7 @@ var render = function() {
                     ),
                     _vm._v(" "),
                     _c("input", {
-                      staticClass: "     m-2 float-right",
+                      staticClass: "btn btn-success m-2 float-right",
                       attrs: { type: "submit", name: "submit", value: "Submit" }
                     })
                   ])

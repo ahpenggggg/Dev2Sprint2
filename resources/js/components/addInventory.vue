@@ -15,7 +15,7 @@
                   <div class="form-group"v-for="(inventory, index) of inventories">
                     <div class="card-title ml-1">
                       <h5 class="float-left">Inventory #{{index + 1}}</h5>
-                      <button class="   -succes float-right mb-3" type="button" name="removeItem" @click="deleteInventory">x</button>
+                      <button class="btn btn-succes float-right mb-3" type="button" name="removeItem" @click="deleteInventory">x</button>
                     </div>
 
                     <input class="form-control col-xs-3" placeholder="Inventory Name" name="inventoryName" maxlength="25" v-model="inventory.invName">
@@ -33,9 +33,9 @@
                   </div>
 
                   <div class="submit">
-                    <button class="     m-2" @click.prevent="addInventory">Create Product <br /> </button>
+                    <button class="btn btn-success m-2" @click.prevent="addInventory">Create Product <br /> </button>
 
-                    <input class="     m-2 float-right" type="submit" name="submit" value="Submit">
+                    <input class="btn btn-success m-2 float-right" type="submit" name="submit" value="Submit">
 
                   </div>
 
