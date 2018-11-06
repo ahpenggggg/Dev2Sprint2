@@ -22,7 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         body{
-          background-color: #0d0d0d;
+          background-color: #ffffff;
         }
         navbar-nav{
           padding: 50px;
@@ -83,7 +83,7 @@
 
         <main class="py-4">
             @yield('content')
-              
+
         </main>
     </div>
 
